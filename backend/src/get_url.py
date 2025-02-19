@@ -30,6 +30,7 @@ def lambda_handler(event, context):
             }
         return {
             'statusCode': 302,  # 302 for temporary redirect, 301 for permanent
+            #'Location': response['Item']['long_url'],
             'headers': {
                 "Access-Control-Allow-Origin": "*", 
             "Access-Control-Allow-Methods": "OPTIONS, POST, GET", 

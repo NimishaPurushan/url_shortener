@@ -1,4 +1,4 @@
-const rest_api_id = "i4lyj2xvr3"
+const rest_api_id = "je120eartd"
 const deployment = "dev"
 const url = "https://localhost:4566/restapis/"+rest_api_id+"/"+deployment+"/_user_request_/url"
 
@@ -17,7 +17,6 @@ async function get_url() {
 }
 
 async function post_url(long_url: string) {
-    const url = "https://localhost:4566/restapis/"+rest_api_id+"/"+deployment+"/_user_request_/url/"
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -34,7 +33,6 @@ async function post_url(long_url: string) {
 }
 
 export async function get_url_by_code(short_code: string) {
-    const url = "https://localhost:4566/restapis/"+rest_api_id+"/"+deployment+"/_user_request_/url"
     const response = await fetch(`${url}/${short_code}`, {
         method: "GET",
         headers: {
